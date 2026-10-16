@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anytime Invest | Wealth Management</title>
+  <meta name="description" content="Anytime Invest — a data-driven wealth management analytics platform." />
+  <link rel="stylesheet" href="/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="#home">
+      <span class="brand-icon">A</span>
+      <span>Anytime<span class="brand-accent"> Invest</span></span>
+    </a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#features">Features</a>
+      <a href="#technology">Technology</a>
+      <a href="#reports">Client Reports</a>
+    </nav>
+    <a class="nav-cta" href="#reports">Explore Reports ↗</a>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="pulse"></span> SMARTER WEALTH. CLEARER INSIGHTS.</span>
+        <h1>Your wealth,<br />in a <span class="gradient-text">clearer light.</span></h1>
+        <p class="hero-description">
+          A data-driven wealth management platform that turns client portfolio
+          data into meaningful insights and easy-to-understand reports.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#reports">Explore Client Reports <span>↗</span></a>
+          <a class="button button-secondary" href="#features">Discover the platform</a>
+        </div>
+        <div class="trust-note"><span>✓</span> Powered by real-time database queries</div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="visual-orb orb-one"></div>
+        <div class="visual-orb orb-two"></div>
+        <div class="dashboard-preview">
+          <div class="preview-top">
+            <div><span class="mini-label">PORTFOLIO OVERVIEW</span><h3>Client Insights</h3></div>
+            <span class="live-badge"><span></span> DATA CONNECTED</span>
+          </div>
+          <div class="preview-metric">
+            <div><span class="mini-label">CURRENT VALUE</span><h2>₹ 2,60,000</h2></div>
+            <div class="metric-symbol">↗</div>
+          </div>
+          <div class="chart-wrap"><canvas id="heroChart" aria-label="Illustrative portfolio chart"></canvas></div>
+          <div class="preview-bottom">
+            <div><span class="mini-label">CLIENT</span><strong>Client 1</strong></div>
+            <div><span class="mini-label">ACTIVE SCHEMES</span><strong>1</strong></div>
+            <div><span class="mini-label">TOTAL UNITS</span><strong>212</strong></div>
+          </div>
+          <p class="preview-disclaimer">Design preview · Sample figures; live figures are loaded in Client Reports.</p>
+        </div>
+        <div class="floating-note"><span class="floating-check">✓</span><div><strong>Data-led decisions</strong><small>Insights made simpler</small></div></div>
+      </div>
+    </section>
+
+    <section class="stats-strip">
+      <div><strong>01</strong><span>Unified client insights</span></div>
+      <div><strong>360°</strong><span>Portfolio overview</span></div>
+      <div><strong>PDF</strong><span>Downloadable reports</span></div>
+      <div><strong>SQL</strong><span>Data-backed analytics</span></div>
+    </section>
+
+    <section class="section features-section" id="features">
+      <div class="section-heading">
+        <span class="eyebrow">BUILT FOR CLARITY</span>
+        <h2>From portfolio data<br />to <span class="gradient-text">better visibility.</span></h2>
+        <p>One simple platform to explore client information, review portfolio metrics, and prepare reports.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card"><span class="feature-icon">⌕</span><h3>Client Lookup</h3><p>Retrieve client details by ID directly from the connected Databricks table.</p><span class="card-number">01 / DATA</span></article>
+        <article class="feature-card featured-card"><span class="feature-icon">▥</span><h3>Portfolio Overview</h3><p>View available investment values, advisor details, scheme counts, and units.</p><span class="card-number">02 / INSIGHTS</span></article>
+        <article class="feature-card"><span class="feature-icon">↧</span><h3>Client Reports</h3><p>Access a clean, downloadable PDF report for an individual client.</p><span class="card-number">03 / REPORTING</span></article>
+      </div>
+    </section>
+
+    <section class="technology-section" id="technology">
+      <div class="section tech-layout">
+        <div class="section-heading tech-heading">
+          <span class="eyebrow">UNDER THE HOOD</span>
+          <h2>Built on a <span class="gradient-text">connected data stack.</span></h2>
+          <p>A lightweight web interface backed by a server-side SQL connection and a cloud analytics warehouse.</p>
+        </div>
+        <div class="architecture">
+          <div class="architecture-node"><span class="architecture-icon">◈</span><div><strong>Frontend</strong><small>HTML · CSS · JavaScript</small></div><span class="node-tag">01</span></div>
+          <div class="architecture-line"><span>↓</span></div>
+          <div class="architecture-node"><span class="architecture-icon">⌘</span><div><strong>Backend API</strong><small>Node.js · Express</small></div><span class="node-tag">02</span></div>
+          <div class="architecture-line"><span>↓</span></div>
+          <div class="architecture-node"><span class="architecture-icon">▤</span><div><strong>Analytics Warehouse</strong><small>Databricks SQL</small></div><span class="node-tag">03</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reports-section" id="reports">
+      <div class="section-heading">
+        <span class="eyebrow">CLIENT REPORT CENTER</span>
+        <h2>Insights, <span class="gradient-text">one client at a time.</span></h2>
+        <p>Enter a client ID to retrieve the latest available portfolio data from Databricks.</p>
+      </div>
+      <div class="report-layout">
+        <div class="report-intro">
+          <span class="report-icon">▤</span>
+          <h3>Generate a client report</h3>
+          <p>Look up a client and review the data available in the portfolio mart.</p>
+          <ul><li>Client and advisor details</li><li>Available portfolio metrics</li><li>PDF report download</li></ul>
+          <div class="secure-note"><span>✓</span> Credentials remain on the server</div>
+        </div>
+        <div class="report-panel">
+          <label for="clientId">CLIENT IDENTIFICATION</label>
+          <div class="search-row">
+            <input id="clientId" type="number" min="1" step="1" placeholder="e.g. 1" />
+            <button id="searchButton" class="button button-primary" type="button">Find Client <span>→</span></button>
+          </div>
+          <p class="input-hint">Enter a valid numeric client ID.</p>
+          <div id="statusMessage" class="status-message" role="status" aria-live="polite"></div>
+          <div id="clientResult" class="client-result" hidden>
+            <div class="result-heading"><div><span class="mini-label">CLIENT PROFILE</span><h3 id="resultName">—</h3></div><span class="result-badge">RETRIEVED</span></div>
+            <div class="result-grid">
+              <div><span>Client ID</span><strong id="resultId">—</strong></div>
+              <div><span>Advisor</span><strong id="resultAdvisor">—</strong></div>
+              <div><span>Current Value</span><strong id="resultValue">—</strong></div>
+              <div><span>Total Investment</span><strong id="resultInvestment">—</strong></div>
+              <div><span>Gain / Loss</span><strong id="resultGain">—</strong></div>
+              <div><span>Gain %</span><strong id="resultPercent">—</strong></div>
+              <div><span>Active Schemes</span><strong id="resultSchemes">—</strong></div>
+              <div><span>Total Units</span><strong id="resultUnits">—</strong></div>
+              <div><span>Last Updated</span><strong id="resultDate">—</strong></div>
+            </div>
+            <button id="downloadButton" class="button button-primary download-button" type="button">Download Client PDF ↧</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing-section">
+      <div><span class="eyebrow">ANYTIME INVEST</span><h2>Make portfolio data<br />easier to understand.</h2></div>
+      <a class="button button-light" href="#reports">Explore Client Reports ↗</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand" href="#home"><span class="brand-icon">A</span><span>Anytime<span class="brand-accent"> Invest</span></span></a>
+    <p>Wealth Management Analytics Platform</p>
+    <span>© 2026 Anytime Invest · Academic project demo</span>
+  </footer>
+  <script src="/script.js"></script>
+</body>
+</html>
